@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {{title}}
-    </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    {% block head %}{% endblock %}
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
-    {% if prism == true %}
-      <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
-    {% endif %}
-  </head>
-  <body>
-    {% include "./partials/navbar.html" %}
-
+    <title>Blank Page</title>
+    <!-- Facebook Metadata -->
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="Description of your page.">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="src/static/css/style.css">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to my first blog experiment</p>
     {{ content | safe }}
-
-    {% include "./partials/footer.html" %}
-
-    <script src="/static/js/alpine.js"></script>
-
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
-
-  </body>
+</body>
 </html>
