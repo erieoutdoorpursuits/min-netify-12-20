@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blank Page</title>
+    <!-- Facebook Metadata -->
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="Description of your page.">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
     <title>Erie Outdoor Pursuits - Blog</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -39,36 +46,8 @@
         <h1 class="display-4 font-weight-bold">Erie Outdoor Pursuits</h1>
         <p class="lead">Exploring the Great Outdoors through Bicycling, Hiking, and Kayaking</p>
     </header>
-
-    <main class="row">
-        <div class="col-md-8 blog-main">
-            <div class="blog-post">
-                <h2 class="post-title">Top Biking Trails in Erie County</h2>
-                <p class="post-meta">October 10, 2023 by John Doe</p>
-                <div class="post-content">
-                    <img src="https://via.placeholder.com/800x400?text=Biking+Trail" alt="Biking Trail">
-                    <p>Discover some of the best biking trails in Erie County. From scenic routes to challenging mountain paths, there's something for every level of cyclist.</p>
-                </div>
-            </div>
-
-            <div class="blog-post">
-                <h2 class="post-title">Hiking in Presque Isle State Park</h2>
-                <p class="post-meta">September 25, 2023 by Jane Smith</p>
-                <div class="post-content">
-                    <img src="https://via.placeholder.com/800x400?text=Presque+Isle+State+Park" alt="Presque Isle State Park">
-                    <p>Explore the natural beauty of Presque Isle State Park with our top hiking trails. Perfect for nature lovers and outdoor enthusiasts.</p>
-                </div>
-            </div>
-
-            <div class="blog-post">
-                <h2 class="post-title">Kayaking on Lake Erie</h2>
-                <p class="post-meta">August 15, 2023 by Alex Johnson</p>
-                <div class="post-content">
-                    <img src="https://via.placeholder.com/800x400?text=Lake+Erie+Kayaking" alt="Lake Erie Kayaking">
-                    <p>Experience the thrill of kayaking on Lake Erie. Whether you're a beginner or an experienced paddler, there are plenty of opportunities to enjoy the water.</p>
-                </div>
-            </div>
-        </div>
+      {{ content | safe }}
+ 
 
         <aside class="col-md-4 blog-sidebar">
             <div class="p-4 mb-3 bg-light rounded">
